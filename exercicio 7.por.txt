@@ -1,0 +1,38 @@
+programa  {
+	funcao inicio() {
+		cadeia nome
+		escreva("nome: ")
+		leia(nome)
+		real quantidade
+		escreva("quantidade: ")
+		leia(quantidade)
+		real preco
+		escreva("preço: ")
+		leia(preco)
+		real total = quantidade * preco
+		escreva("\ntotal: ", total)
+		real desconto
+		cadeia valorDesconto
+		real totalFim
+		se (quantidade <=5) 
+		{
+			desconto = total * 0.02
+			valorDesconto = "2%"
+			totalFim = total - desconto
+		}
+		se (quantidade  > 5 e quantidade <= 10)
+		{
+			desconto = total * 0.03
+			valorDesconto = "3%"
+			totalFim = total - desconto
+		}
+		se (quantidade > 10)
+		{
+			desconto = total * 0.05
+			valorDesconto = "5%"
+			totalFim = total - desconto
+		}
+	escreva("\ndesconto: ", valorDesconto)
+	escreva("\ntotal a pagar :", totalFim)
+}
+}
